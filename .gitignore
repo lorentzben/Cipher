@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # built application files
 *.apk
 *.ap_
@@ -51,4 +51,4 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
->>>>>>> 53c14eb2498feb20154cd5588fbcac064cd3da56
+
