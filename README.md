@@ -10,4 +10,5 @@ The Ciphers explored are:
 * Vigenere Cipher
 
 The program framework with Gradle was borrowed from [here](https://github.com/LoyolaChicagoCode/hello-java)
+
 The Cipher backgrounds and algorithms were borrowed from [here](http://practicalcryptography.com/ciphers/)

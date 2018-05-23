@@ -20,6 +20,7 @@ public class Main {
       }
       if (response.equalsIgnoreCase("R")) {
         RailFence rail = new RailFence();
+        rail.onStart();
         main(args);
       }
       if (response.equalsIgnoreCase("S")) {
