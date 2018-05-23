@@ -1,6 +1,6 @@
 package hw;
 
-public class RailFence {
+public class EmptyEncrypt {
 
   public void onStart() {}
 

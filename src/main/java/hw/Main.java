@@ -23,7 +23,8 @@ public class Main {
         main(args);
       }
       if (response.equalsIgnoreCase("S")) {
-        System.out.println("Straddle Checkerboard");
+        StraddleChecker straddle = new StraddleChecker();
+        straddle.onStart();
         main(args);
       }
       if (response.equalsIgnoreCase("P")) {
