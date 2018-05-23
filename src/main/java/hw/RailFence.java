@@ -2,6 +2,8 @@ package hw;
 
 import java.util.*;
 
+// this website helped me develop and troubleshoot the issues I encountered 
+//https://ghimireshankarpost.blogspot.com/2017/04/rail-fence-cipher-java-implementation.html
 public class RailFence {
 
   Scanner keyboard = new Scanner(System.in);
