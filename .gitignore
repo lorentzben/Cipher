@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # built application files
 *.apk
 *.ap_
@@ -35,3 +36,19 @@ local.properties
 
 # Mac files
 *.DS_Store
+=======
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+>>>>>>> 53c14eb2498feb20154cd5588fbcac064cd3da56
