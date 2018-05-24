@@ -4,50 +4,58 @@ import java.util.*;
 
 public class StraddleChecker {
 
-  String[] alphabet = {
-    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
-    "t", "u", "v", "w", "x", "y", "z"
+  char[] alphabet = {
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+    't', 'u', 'v', 'w', 'x', 'y', 'z'
   };
+  HashMap<Character,Integer> alphabetMap = new HashMap<Character,Integer>();
+	//TODO add hashmap values for a-z 1-26
+	
   Scanner keyboard = new Scanner(System.in);
 
   Random rand = new Random();
 
   public void onStart() {
-    List<String> alphabetList = new ArrayList<>();
-    for (String a : alphabet) {
+    // makes a list and randomizes it from the alphabet array
+    List<Character> alphabetList = new ArrayList<>();
+    for (char a : alphabet) {
       alphabetList.add(a);
     }
     Collections.shuffle(alphabetList);
+    // generates two random numbers to pick indicies that are left blank in the first row
     int randomOne = rand.nextInt(10) + 0;
     int randomTwo = rand.nextInt(10) + 0;
-    String[][] board = new String[9][2];
-    Queue<String> alphaQueue = new LinkedList<String>();
-    for (String letter : alphabetList) {
-      alphaQueue.offer(letter);
-    }
+    // generates the board
+    char[][] board = new char[3][10];
 
-    for (int i = 0; i < 2; i++) {
-      for (int j = 0; i < 9; j++) {
-        for (String let : alphabetList) {
-          if ((i == 0) && ((j == randomOne) || (j == randomTwo))) {
-            board[i][j] = "";
+    int count = 0;
+    Iterator iter = alphabetList.listIterator();
+    for (int i = 0; i < 3; i++) {
+      System.out.println("First Loop");
+      for (int j = 0; j < 10; j++) {
+        System.out.println("Second Loop " + j + " " + i);
+        if (i == 0 && (j == randomOne || j == randomTwo)) {
+          board[i][j] = '*';
+        } else {
+
+          char ch = ' ';
+          if (!iter.hasNext()) {
+            ch = ' ';
           } else {
-            board[i][j] = alphaQueue.poll();
+            ch = iter.next().toString().charAt(0);
           }
+          board[i][j] = ch;
         }
       }
     }
 
-    for (int i = 0; i < 2; i++) {
-      for (int j = 0; j < 9; j++) {
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 10; j++) {
         System.out.print(board[i][j]);
-        System.out.println();
       }
+      System.out.println();
     }
 
-    for (String str : alphabetList) {
-      System.out.println(str);
-    }
     System.out.println(randomOne + " " + randomTwo);
 
     String response = "";
